@@ -1,0 +1,55 @@
+//File Name: q1332/Records.java
+
+package q1332;
+
+class Teacher {
+	//Declare variables: name and Years of Experience
+	private String name;
+	private double yoe;
+	
+	// Constructor with name parameter
+	public Teacher(String name,double yoe ) {
+		this.name=name;
+		this.yoe=yoe;
+	}
+	
+	
+	// Constructor with name and Years of Experience
+	public Teacher(String name) {
+		this.name=name;
+		this.yoe=0.0;
+	}
+	
+	void display() {
+      System.out.println("Name: " + name + ", Years of Experience: " + yoe);
+    }
+}
+
+public class Records {
+    public static void main(String[] args) {
+    	if(args.length==2) {
+    		String name=args[0];
+    		double experience=Double.parseDouble(args[1]);
+    		Teacher teacher=new Teacher(name,experience);
+    		teacher.display();
+    	}
+    	else if(args.length==1) {
+    		String name=args[0];
+    		Teacher teacher=new Teacher(name);
+    		teacher.display();
+    		 
+    	} else {
+    		System.out.println("Please provid valid input.");
+    		
+    	}
+    	
+    //if args.length is equal to 1 call the Constructor with 1 argument
+    	
+    	
+    //if args.length is equal to 2 call the Constructor with 2 arguments
+    	
+    	
+    	
+    }
+}
+
